@@ -20,12 +20,15 @@ and open the template in the editor.
         <?php
         // put your code here
         
-        //if
+        if(isset($_POST['submitButton']))
+        {
         
         $id = $_POST['idText'];
         $name = $_POST['nameText'];
         $salary = $_POST['salaryText'];
         echo $id. ' '.$name.' '.$salary;
+        
+        }
         
         ?>
     </body>
