@@ -20,13 +20,16 @@ and open the template in the editor.
         <?php
         // put your code here
         
+        require 'employee.php';
+        
         if(isset($_GET['submitButton']))
         {
-        
-        $id = $_GET['idText'];
-        $name = $_GET['nameText'];
-        $salary = $_GET['salaryText'];
-        echo $id. ' '.$name.' '.$salary;
+        $employeeObj = new Employee();
+        $employeeObj->id = $_GET['idText'];
+        $employeeObj->name=$_GET['nameText'];
+        $employeeObj->salary = $_GET['salaryText'];
+       
+        echo $employeeObj->id. ' '. $employeeObj->name.' '.$employeeObj->salary;
         
         }
         
