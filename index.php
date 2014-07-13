@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <form action="index.php" method="POST">
+        <form action="index.php" method="GET">
             ID : <input type="text" name="idText"><br/>
             Name<input type="text" name="nameText"><br/>
             Salary : <input type="text" name="salaryText"><br/>
@@ -20,12 +20,12 @@ and open the template in the editor.
         <?php
         // put your code here
         
-        if(isset($_POST['submitButton']))
+        if(isset($_GET['submitButton']))
         {
         
-        $id = $_POST['idText'];
-        $name = $_POST['nameText'];
-        $salary = $_POST['salaryText'];
+        $id = $_GET['idText'];
+        $name = $_GET['nameText'];
+        $salary = $_GET['salaryText'];
         echo $id. ' '.$name.' '.$salary;
         
         }
